@@ -2,6 +2,14 @@ import pyautogui
 import webbrowser
 import time
 import datetime
+import tkinter as tk
+from tkinter import messagebox
+
+def show_warning_box():
+    root = tk.Tk()
+    root.withdraw()  # Hide the main window
+    messagebox.showinfo("Automation Notice", "WhatsApp automation will start in 30 seconds. Please get ready!")
+    root.destroy()
 
 def log_run(status):
     log_file = "<Insert path to your log file>"
@@ -42,6 +50,11 @@ if today > datetime.date(2025, 8, 13):
     print("Schedule ended. Skipping.")
     log_run("Skipped - Schedule Ended")
     exit()
+
+# === Display warning box for user to be prepared for automation ===
+show_warning_box()
+print("Waiting 1 minute before starting...")
+time.sleep(30)
 
 # === Open WhatsApp Web and send ===
 print("Opening WhatsApp Web...")
