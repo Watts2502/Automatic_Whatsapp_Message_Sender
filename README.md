@@ -8,7 +8,8 @@ A Python-based automation script that sends scheduled messages to specific Whats
 
 - ✅ Sends daily reminders to selected WhatsApp groups  
 - ✅ Skips Sundays  
-- ✅ Automatically stops after a configurable date  
+- ✅ Automatically stops after a configurable date
+- ✅ Displays a warning box for user to prepare for the automation
 - ✅ Runs silently in the background using a `.plist` launcher  
 - ✅ Logs execution output and errors for debugging  
 
